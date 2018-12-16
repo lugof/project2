@@ -1,0 +1,88 @@
+{{> mainhead}}
+{{> midhead}}
+
+
+<body class="vertical-layout vertical-content-menu 1-column  bg-full-screen-image menu-expanded blank-page blank-page"
+    data-open="click" data-menu="vertical-content-menu" data-col="1-column">
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <div class="app-content content">
+        <div class="alert alert-success">
+            <center>
+                <flash-messages></flash-messages>
+            </center>
+        </div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <section class="flexbox-container">
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="col-md-4 col-10 box-shadow-2 p-0">
+                            <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
+                                <div class="card-header border-0">
+                                    <div class="card-title text-center">
+                                        <img src="/app-assets/images/logo/logo-dark.png" class="image-logo" alt="branding logo">
+                                    </div>
+                                    <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2">
+                                        <span>Easily Using</span>
+                                    </h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="text-center">
+                                        <a href="/auth/facebook" class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook">
+                                            <span class="la la-facebook"></span>
+                                        </a>
+
+                                        <a href="/auth/github" class="btn btn-social-icon mr-1 mb-1 btn-outline-github">
+                                            <span class="la la-github font-medium-4"></span>
+                                        </a>
+                                    </div>
+                                    <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1">
+                                        <span>OR Using Account Details</span>
+                                    </p>
+                                    <div class="card-body">
+                                        <form class="form-horizontal" action="index.html" novalidate>
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <input type="text" class="form-control" id="username" placeholder="Your Username"
+                                                    required>
+                                                <div class="form-control-position">
+                                                    <i class="ft-user"></i>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <input type="password" class="form-control" id="user-password"
+                                                    placeholder="Enter Password" required>
+                                                <div class="form-control-position">
+                                                    <i class="la la-key"></i>
+                                                </div>
+                                            </fieldset>
+                                            <div class="form-group row">
+                                                <div class="col-md-6 col-12 text-center text-sm-left">
+
+                                                </div>
+                                                <div class="col-md-6 col-12 float-sm-left text-center text-sm-right"><a
+                                                        href="recover" class="card-link">Forgot Password?</a></div>
+                                            </div>
+                                            <button type="submit" id="login" class="btn btn-outline-info btn-block"><i
+                                                    class="ft-unlock"></i>
+                                                Login</button>
+                                        </form>
+                                    </div>
+                                    <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1">
+                                        <span>New to reMINDer ?</span>
+                                    </p>
+                                    <div class="card-body">
+                                        <a href="accounts" class="btn btn-outline-danger btn-block"><i class="ft-user"></i>
+                                            Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+{{> script}}
+{{> loginscript}}

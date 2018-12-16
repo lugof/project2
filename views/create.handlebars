@@ -1,0 +1,133 @@
+{{> mainhead}}
+{{> midhead}}
+<div class="vertical-layout vertical-content-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-content-menu"
+    data-col="2-columns">
+    <!-- fixed-top-->
+    {{> topbarnav}}
+    <div class="app-content content">
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-6 col-12 mb-2">
+                    <h3 class="content-header-title">Create Task</h3>
+                </div>
+
+            </div>
+            {{> sidemenu}}
+
+            <div class="content-body">
+                <section class="row">
+                    <div class="col-12">
+
+                        <div class="row match-height">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title" id="basic-layout-tooltip">Create new Task</h4>
+                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                        <div class="heading-elements">
+                                            <ul class="list-inline mb-0">
+                                                <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                                <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                                <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                                <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-content collapse show">
+                                        <div class="card-body">
+
+                                            <form class="form">
+                                                <div class="form-body">
+                                                    <div class="form-group">
+                                                        <label for="issueinput1">Assigned to</label>
+                                                        <input type="text" id="issueinput1" class="form-control"
+                                                            placeholder="Mr Robot" name="issuetitle" data-toggle="tooltip"
+                                                            data-trigger="hover" data-placement="top" data-title="Issue Title">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="issueinput0">Email to</label>
+                                                        <input type="text" id="issueinput0" class="form-control"
+                                                            placeholder="mail@mail.com" name="issuetitle" data-toggle="tooltip"
+                                                            data-trigger="hover" data-placement="top" data-title="Issue Title">
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="issueinput3">Deadline date</label>
+                                                                <input type="date" id="issueinput3" class="form-control"
+                                                                    name="dateopened" data-toggle="tooltip"
+                                                                    data-trigger="hover" data-placement="top"
+                                                                    data-title="Date Opened">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="issueinput4">Deadline hour</label>
+
+                                                                <select class="custom-select" size="3" id="issueinput4">
+                                                                    <option selected>Select hour from menu</option>
+                                                                    <option value="00:00:00">00:00</option>
+                                                                    <option value="05:00:00">05:00</option>
+                                                                    <option value="06:00:00">06:00</option>
+                                                                    <option value="07:00:00">07:00</option>
+                                                                    <option value="08:00:00">08:00</option>
+                                                                    <option value="09:00:00">09:00</option>
+                                                                    <option value="10:00:00">10:00</option>
+                                                                    <option value="11:00:00">11:00</option>
+                                                                    <option value="12:00:00">12:00</option>
+                                                                    <option value="13:00:00">13:00</option>
+                                                                    <option value="14:00:00">14:00</option>
+                                                                    <option value="15:00:00">15:00</option>
+                                                                    <option value="16:00:00">16:00</option>
+                                                                    <option value="17:00:00">17:00</option>
+                                                                    <option value="18:00:00">18:00</option>
+                                                                    <option value="19:00:00">19:00</option>
+                                                                    <option value="20:00:00">20:00</option>
+                                                                    <option value="21:00:00">21:00</option>
+                                                                    <option value="22:00:00">22:00</option>
+                                                                    <option value="23:00:00">23:00</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="issueinput5">Progress %</label>
+                                                    <input type="text" id="issueinput5" class="form-control"
+                                                        placeholder="30" name="openedby" data-toggle="tooltip"
+                                                        data-trigger="hover" data-placement="top" data-title="Opened By">
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <label for="issueinput8">Task</label>
+                                                    <textarea id="issueinput8" rows="5" class="form-control" name="comments"
+                                                        placeholder="All the task to do..." data-toggle="tooltip"
+                                                        data-trigger="hover" data-placement="top" data-title="Comments"></textarea>
+                                                </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <a href="/task" class="btn btn-danger btn-min-width mr-1 mb-1">
+                                                <i class="la la-eye"></i> Cancel
+                                            </a>
+                                            <a href="/task" id="submitTask" class="btn btn-success btn-min-width mr-1 mb-1">
+                                                <i class="la la-check-square-o"></i> Save
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </section>
+    </div>
+</div>
+{{> footer}}
+{{> script}}
+{{> createscript}}

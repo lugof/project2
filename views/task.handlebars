@@ -1,0 +1,149 @@
+<!-- fixed-top-->
+{{> mainhead}}
+{{> midhead}}
+<div class="vertical-layout vertical-content-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-content-menu"
+  data-col="2-columns">
+  <!-- fixed-top-->
+  {{> topbarnav}}
+  <!-- ////////////////////////////////////////////////////////////////////////////-->
+  <div class="app-content content">
+    <div class="content-wrapper">
+      <div class="content-header row">
+        <div class="content-header-left col-md-6 col-12 mb-2">
+          <h3 class="content-header-title">Task Lists</h3>
+        </div>
+      </div>
+      {{> sidemenu}}
+      <div class="content-body">
+        <section class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">My Task List</h4>
+                <a class="heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                <div class="heading-elements">
+                  <a href="create" class="button btn btn-primary btn-sm"><i class="ft-plus white"> </i>New Task</a>
+                  <!-- <button  class="btn btn-primary btn-sm"><i class="ft-plus white"></i> New Task </button> -->
+
+
+                  <span class="dropdown">
+                    <button id="btnSearchDrop1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                      class="btn btn-warning btn-sm dropdown-toggle dropdown-menu-right"><i class="ft-download white"></i></button>
+                    <span aria-labelledby="btnSearchDrop1" class="dropdown-menu mt-1 dropdown-menu-right">
+
+                      <a href="#" class="dropdown-item"><i class="la la-random"></i> Accept</a>
+                      <a href="#" class="dropdown-item"><i class="la la-bar-chart"></i> Progress</a>
+                      <a href="#" class="dropdown-item"><i class="la la-user"></i> Assign to</a>
+                    </span>
+                  </span>
+
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="card-body">
+                  <!-- Task List table -->
+                  <div class="table-responsive">
+                    <table id="project-task-list" class="table table-white-space table-bordered row-grouping display no-wrap icheck table-middle">
+                      <thead>
+                        <tr>
+                          <th>
+                            <input type="checkbox" class="input-chk">
+                          </th>
+                          <th>Task</th>
+                          <th>Date Assigned</th>
+                          <th>Accepted</th>
+                          <th>Progress</th>
+                          <th>Owner</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- ABC Project -->
+
+                        <!-- _________________________________________________________empieza__________________________________________________________________________ -->
+
+
+
+                        {{#each tareas}}
+                        <tr>
+                          <td>
+                            <input type="checkbox" class="input-chk">
+                          </td>
+
+
+                          <td>
+                            <a href="#" class="text-bold-600">{{this.assignedUser}}</a>
+                            <p class="text-muted"> {{this.task}}
+                            </p>
+                          </td>
+
+                          <td>
+                            <span class="mb-0 text-bold-600">Assigned on <em>{{this.createdAt}} </em>
+                              <span class="text-bold-600">Deadline </span> on
+                              <em>{{deadline}}</em>
+                            </span>
+                          </td>
+
+                          <td>
+                            <span class="badge badge-default badge-danger">{{isAccepted}}</span>
+                          </td>
+                          <td>
+                            <div class="progress progress-sm">
+                              <div aria-valuemin="05" aria-valuemax="100" class="progress-bar bg-gradient-x-success"
+                                role="progressbar" style="width:{{progress}}%" aria-valuenow={{progress}}></div>
+                            </div>
+                          </td>
+                          <td class="text-center">
+                            <span class="avatar avatar-busy">
+                              <img src="/app-assets/images/portrait/small/avatar-s-3.png" alt="avatar" data-toggle="tooltip"
+                                data-placement="right" title="John Doe"><i class=""></i>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="dropdown">
+                              <button id="btnSearchDrop2" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" class="btn btn-info dropdown-toggle"><i class="la la-cog"></i></button>
+                              <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
+
+                                <a href="edit" id="edit" class="editing dropdown-item" data-id={{id}}><i class="ft-edit-2"></i>
+                                  Edit Task</a>
+
+
+                                <div class="dropdown-divider"></div>
+                                <a href="/task" class="deleting dropdown-item" data-id={{id}}><i class="ft-trash"></i>
+                                  Delete Task</a>
+                              </span>
+                            </span>
+                          </td>
+                        </tr>
+
+                        {{/each}}
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th>
+                            <input type="checkbox" class="input-chk">
+                          </th>
+                          <th>Task</th>
+                          <th>Dates</th>
+                          <th>Accepted</th>
+                          <th>Progress</th>
+                          <th>Owner</th>
+                          <th>Actions</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                  <!--/ Task List table -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+{{> footer}}
+{{> script}}
+{{> taskscript}}

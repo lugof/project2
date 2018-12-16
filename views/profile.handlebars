@@ -1,0 +1,61 @@
+<!-- fixed-top-->
+{{> mainhead}}
+{{> midhead}}
+<div class="vertical-layout vertical-content-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-content-menu"
+    data-col="2-columns">
+    <!-- fixed-top-->
+    {{> topbarnav}}
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+    <div class="app-content content">
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-6 col-12 mb-2">
+                    <h3 class="content-header-title">Notes</h3>
+                </div>
+            </div>
+            {{> sidemenu}}
+            <div class="content-body">
+
+                <section class="row">
+
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Profile</h4>
+                            </div>
+
+                            <div id="notes" class="notes">
+                                <div class="container">
+
+                                    {{#each accounts}}
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item">User Name: - {{username}}</li>
+                                        <li class="list-group-item">First Name: - {{first_name}}</li>
+                                        <li class="list-group-item">Last Name: - {{last_name}}</li>
+                                        <li class="list-group-item">Email Adress: - {{email}} </li>
+                                        </br>
+                                        </br>
+                                    </ul>
+                                    {{/each}}
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            </section>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>
+{{> footer}}
+{{> script}}
+{{> taskscript}}

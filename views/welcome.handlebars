@@ -1,0 +1,50 @@
+{{> mainhead}}
+{{> midhead}}
+<div class="vertical-layout vertical-content-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-content-menu"
+    data-col="2-columns">
+    <!-- fixed-top-->
+    {{> topbarnav}}
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <div class="app-content content">
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-6 col-12 mb-2">
+                    <h3 class="content-header-title">Task Lists</h3>
+                </div>
+            </div>
+            {{> sidemenu}}
+            <div class="content-body">
+                <section class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <h1 class="welcome">Welcome to reMINDer!</h1>
+                                    <br>
+                                    <div class="image-welcome">
+                                        <img class="object-fit_contain" src="https://payload.cargocollective.com/1/2/64089/12769273/NYT-BeMoreProductive-TopBanner-Desktop-05_1000.jpg">
+                                    </div>
+                                    <div class="paragraph">
+                                        <br>
+                                        <br>
+                                        <h3>We know that life's chores can seem hectic sometimes. Don't worry, we got
+                                            your back!</h3>
+                                        <br>
+                                        <h3>Start getting orginized now! </h3>
+                                    </div>
+                                    <br>
+                                    <div class="button">
+                                        <a class="btn btn-success btn-min-width mr-1 mb-1" href="/task" role="button">
+                                            <i class="la la-check"></i> Create a task</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+{{> footer}}
+{{> script}}
+{{> taskscript}}

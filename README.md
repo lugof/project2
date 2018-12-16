@@ -22,6 +22,9 @@ Task management app with Sequelize, Node, Express, Handlebars, Passport and a ho
 ## Authors
 
 * **Manuel Muñuzuri** -- [Portfolio](https://manrar.github.io/)
+* **Francisco Gonzalez** -- [Portfolio](https://github.com/lugof/)
+* **Ana Gonzalez**
+* **Enrique Gomez**
 
 ## Screen Shots
 
